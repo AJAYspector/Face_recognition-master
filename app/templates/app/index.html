@@ -1,0 +1,36 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<div
+  class="container"
+  style="background-color: white; padding: 50px; margin-top: 100px"
+>
+  <h1>Employee Recognition System</h1>
+  <hr />
+  <div class="container">
+    <a
+      class="btn btn-primary"
+      href="{% url 'identify' %}"
+      style="font-size: 20px; margin-bottom: 10px"
+      >Identify Faces</a
+    >
+    <a
+      class="btn btn-primary"
+      href="{% url 'detected' %}"
+      style="font-size: 20px; margin-bottom: 10px"
+      >Detected</a
+    >
+    <a
+      class="btn btn-primary"
+      href="{% url 'adminstra' %}"
+      style="font-size: 20px; margin-bottom: 10px"
+      >Administration</a
+    >
+    <a
+      class="btn btn-primary"
+      href="{% url 'staff' %}"
+      style="font-size: 20px; margin-bottom: 10px"
+      >STAFF LOGIN</a
+    >
+  </div>
+</div>
+{% endblock %}

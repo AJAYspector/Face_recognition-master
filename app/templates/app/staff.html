@@ -1,0 +1,22 @@
+<form method="POST">
+  {% csrf_token %}
+  <input type="text" name="user" />
+  <button type="submit">Submit</button>
+  <label>ID:</label>{{staffs.id}} <label>NAME:</label>{{staffs.name}}
+  <label>specialist:</label>{{staffs.specialist}}
+  <br />
+  <table>
+    <tr>
+      <th>id</th>
+      <th>Name</th>
+      <th>booking</th>
+    </tr>
+    {% for book in bookings %}
+    <tr>
+      <td>{{book.id}}</td>
+      <td>{{book.doc}}</td>
+      <td>{{book.booking_id}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</form>
